@@ -19,3 +19,38 @@ navItem.forEach(item => {
         }
     })
 })
+
+
+/* Animar os itens que tiver atributo data-anime */
+
+const item = document.querySelectorAll("[data-anime]");
+
+const animeScroll = () => {
+    const windowTop =  window.pageYOffset + window.innerHeight * 0.85;
+   
+    
+    item.forEach((element) => {
+         /* altura da pagina > maior que topo do elemento*/
+        if(windowTop > element.offsetTop) {
+        element.classList.add('animate');
+     }else{
+         element.classList.remove("animate");
+     }
+    });
+};
+
+animeScroll()
+
+window.addEventListener("scroll",()=>{
+    animeScroll();
+})
+
+/* Ativar carregamento no botão  de enviar formulario*/
+ const btnEnviar = document.querySelector('#btn-enviar')
+ const btnEnviarLoader = document.querySelector('#btn-enviar-loader')
+
+
+btnEnviar.addEventListener("click", () => {
+  btnEnviarLoader.style.display = "block";
+  btnEnviar.style.display = "none"
+})

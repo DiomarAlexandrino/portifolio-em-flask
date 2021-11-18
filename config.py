@@ -1,3 +1,3 @@
 email = 'diomar.alexandrino@gmail.com'
-senha ='******'
+senha ='****'
 nome = 'DiomarAlexandrino'
