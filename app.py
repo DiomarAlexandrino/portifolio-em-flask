@@ -4,6 +4,7 @@ from flask_mail import Mail, Message
 #from config import email, senha
 from dotenv import load_dotenv
 import os
+
 load_dotenv()
 
 
